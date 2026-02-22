@@ -1,0 +1,16 @@
+﻿using System;
+
+// Token: 0x0200009F RID: 159
+public enum InstagramPostResult
+{
+	// Token: 0x04000914 RID: 2324
+	RESULT_OK,
+	// Token: 0x04000915 RID: 2325
+	NO_APPLICATION_INSTALLED,
+	// Token: 0x04000916 RID: 2326
+	USER_CANCELLED,
+	// Token: 0x04000917 RID: 2327
+	SYSTEM_VERSION_ERROR,
+	// Token: 0x04000918 RID: 2328
+	INTERNAL_EXCEPTION
+}

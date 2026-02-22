@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E646D914-DC6F-4F40-94CA-5D6B4F69F35B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Il2CppSystem</RootNamespace>
+    <AssemblyName>Il2CppSystem</AssemblyName>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Il2CppInterop.Common" />
+    <Reference Include="Il2CppInterop.Runtime" />
+    <Reference Include="Il2CppMono.Security">
+      <HintPath>..\..\..\interop\Il2CppMono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>..\..\..\interop\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Configuration">
+      <HintPath>..\..\..\interop\Il2CppSystem.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Xml">
+      <HintPath>..\..\..\interop\Il2CppSystem.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Private.CoreLib" />
+    <Reference Include="System.Runtime" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\Generic\DictionaryKeyCollectionDebugView.cs" />
+    <Compile Include="Collections\Generic\DictionaryValueCollectionDebugView.cs" />
+    <Compile Include="Collections\Generic\ICollectionDebugView.cs" />
+    <Compile Include="Collections\Generic\IDictionaryDebugView.cs" />
+    <Compile Include="Collections\Generic\LinkedList.cs" />
+    <Compile Include="Collections\Generic\LinkedListNode.cs" />
+    <Compile Include="Collections\Generic\NodeColor.cs" />
+    <Compile Include="Collections\Generic\Queue.cs" />
+    <Compile Include="Collections\Generic\QueueDebugView.cs" />
+    <Compile Include="Collections\Generic\SortedDictionary.cs" />
+    <Compile Include="Collections\Generic\SortedSet.cs" />
+    <Compile Include="Collections\Generic\Stack.cs" />
+    <Compile Include="Collections\Generic\StackDebugView.cs" />
+    <Compile Include="Collections\Generic\TreeRotation.cs" />
+    <Compile Include="Collections\Generic\TreeSet.cs" />
+    <Compile Include="Collections\Generic\TreeWalkPredicate.cs" />
+    <Compile Include="Collections\Specialized\CompatibleComparer.cs" />
+    <Compile Include="Collections\Specialized\HybridDictionary.cs" />
+    <Compile Include="Collections\Specialized\ListDictionary.cs" />
+    <Compile Include="Collections\Specialized\NameObjectCollectionBase.cs" />
+    <Compile Include="Collections\Specialized\NameValueCollection.cs" />
+    <Compile Include="Collections\Specialized\StringCollection.cs" />
+    <Compile Include="ComponentModel\ArrayConverter.cs" />
+    <Compile Include="ComponentModel\BaseNumberConverter.cs" />
+    <Compile Include="ComponentModel\BooleanConverter.cs" />
+    <Compile Include="ComponentModel\CollectionConverter.cs" />
+    <Compile Include="ComponentModel\DecimalConverter.cs" />
+    <Compile Include="ComponentModel\DefaultValueAttribute.cs" />
+    <Compile Include="ComponentModel\DoubleConverter.cs" />
+    <Compile Include="ComponentModel\EditorBrowsableAttribute.cs" />
+    <Compile Include="ComponentModel\EditorBrowsableState.cs" />
+    <Compile Include="ComponentModel\EnumConverter.cs" />
+    <Compile Include="ComponentModel\Int16Converter.cs" />
+    <Compile Include="ComponentModel\Int32Converter.cs" />
+    <Compile Include="ComponentModel\Int64Converter.cs" />
+    <Compile Include="ComponentModel\SingleConverter.cs" />
+    <Compile Include="ComponentModel\StringConverter.cs" />
+    <Compile Include="ComponentModel\TimeSpanConverter.cs" />
+    <Compile Include="ComponentModel\TypeConverter.cs" />
+    <Compile Include="ComponentModel\TypeConverterAttribute.cs" />
+    <Compile Include="ComponentModel\Win32Exception.cs" />
+    <Compile Include="Configuration\IConfigurationSectionHandler.cs" />
+    <Compile Include="Diagnostics\DiagnosticsConfigurationHandler.cs" />
+    <Compile Include="Diagnostics\Stopwatch.cs" />
+    <Compile Include="DomainNameHelper.cs" />
+    <Compile Include="Il2CppMono\Http\NtlmClient.cs" />
+    <Compile Include="Il2CppMono\Http\NtlmSession.cs" />
+    <Compile Include="Il2CppMono\Net\CFArray.cs" />
+    <Compile Include="Il2CppMono\Net\CFDictionary.cs" />
+    <Compile Include="Il2CppMono\Net\CFNetwork.cs" />
+    <Compile Include="Il2CppMono\Net\CFNumber.cs" />
+    <Compile Include="Il2CppMono\Net\CFObject.cs" />
+    <Compile Include="Il2CppMono\Net\CFProxy.cs" />
+    <Compile Include="Il2CppMono\Net\CFProxySettings.cs" />
+    <Compile Include="Il2CppMono\Net\CFProxyType.cs" />
+    <Compile Include="Il2CppMono\Net\CFRange.cs" />
+    <Compile Include="Il2CppMono\Net\CFRunLoop.cs" />
+    <Compile Include="Il2CppMono\Net\CFStreamClientContext.cs" />
+    <Compile Include="Il2CppMono\Net\CFString.cs" />
+    <Compile Include="Il2CppMono\Net\CFUrl.cs" />
+    <Compile Include="Il2CppMono\Net\Security\AsyncHandshakeRequest.cs" />
+    <Compile Include="Il2CppMono\Net\Security\AsyncOperationStatus.cs" />
+    <Compile Include="Il2CppMono\Net\Security\AsyncProtocolRequest.cs" />
+    <Compile Include="Il2CppMono\Net\Security\AsyncProtocolResult.cs" />
+    <Compile Include="Il2CppMono\Net\Security\AsyncReadOrWriteRequest.cs" />
+    <Compile Include="Il2CppMono\Net\Security\AsyncReadRequest.cs" />
+    <Compile Include="Il2CppMono\Net\Security\AsyncWriteRequest.cs" />
+    <Compile Include="Il2CppMono\Net\Security\BufferOffsetSize.cs" />
+    <Compile Include="Il2CppMono\Net\Security\BufferOffsetSize2.cs" />
+    <Compile Include="Il2CppMono\Net\Security\ChainValidationHelper.cs" />
+    <Compile Include="Il2CppMono\Net\Security\MobileAuthenticatedStream.cs" />
+    <Compile Include="Il2CppMono\Net\Security\MobileTlsContext.cs" />
+    <Compile Include="Il2CppMono\Net\Security\MonoTlsProviderFactory.cs" />
+    <Compile Include="Il2CppMono\Net\Security\MonoTlsStream.cs" />
+    <Compile Include="Il2CppMono\Net\Security\NoReflectionHelper.cs" />
+    <Compile Include="Il2CppMono\Net\Security\Private\CallbackHelpers.cs" />
+    <Compile Include="Il2CppMono\Net\Security\ServerCertValidationCallbackWrapper.cs" />
+    <Compile Include="Il2CppMono\Net\Security\SystemCertificateValidator.cs" />
+    <Compile Include="Il2CppMono\Unity\CertHelper.cs" />
+    <Compile Include="Il2CppMono\Unity\Debug.cs" />
+    <Compile Include="Il2CppMono\Unity\UnityTls.cs" />
+    <Compile Include="Il2CppMono\Unity\UnityTlsContext.cs" />
+    <Compile Include="Il2CppMono\Unity\UnityTlsConversions.cs" />
+    <Compile Include="Il2CppMono\Unity\UnityTlsProvider.cs" />
+    <Compile Include="Il2CppMono\Unity\UnityTlsStream.cs" />
+    <Compile Include="Il2CppMono\Unity\X509ChainImplUnityTls.cs" />
+    <Compile Include="Il2CppMono\Util\MonoPInvokeCallbackAttribute.cs" />
+    <Compile Include="IOAsyncCallback.cs" />
+    <Compile Include="IOAsyncResult.cs" />
+    <Compile Include="IOOperation.cs" />
+    <Compile Include="IOSelector.cs" />
+    <Compile Include="IOSelectorJob.cs" />
+    <Compile Include="IO\Compression\CompressionMode.cs" />
+    <Compile Include="IO\Compression\DeflateStream.cs" />
+    <Compile Include="IO\Compression\DeflateStreamNative.cs" />
+    <Compile Include="IO\Compression\GZipStream.cs" />
+    <Compile Include="IPv4AddressHelper.cs" />
+    <Compile Include="IPv6AddressHelper.cs" />
+    <Compile Include="IriHelper.cs" />
+    <Compile Include="Net\AuthenticationManager.cs" />
+    <Compile Include="Net\Authorization.cs" />
+    <Compile Include="Net\AutoWebProxyScriptEngine.cs" />
+    <Compile Include="Net\BasicClient.cs" />
+    <Compile Include="Net\BindIPEndPoint.cs" />
+    <Compile Include="Net\BufferOffsetSize.cs" />
+    <Compile Include="Net\Cache\RequestCache.cs" />
+    <Compile Include="Net\Cache\RequestCacheBinding.cs" />
+    <Compile Include="Net\Cache\RequestCacheLevel.cs" />
+    <Compile Include="Net\Cache\RequestCachePolicy.cs" />
+    <Compile Include="Net\Cache\RequestCacheProtocol.cs" />
+    <Compile Include="Net\Cache\RequestCacheValidator.cs" />
+    <Compile Include="Net\CaseInsensitiveAscii.cs" />
+    <Compile Include="Net\CloseExState.cs" />
+    <Compile Include="Net\Comparer.cs" />
+    <Compile Include="Net\Configuration\BypassElement.cs" />
+    <Compile Include="Net\Configuration\BypassElementCollection.cs" />
+    <Compile Include="Net\Configuration\ConnectionManagementElement.cs" />
+    <Compile Include="Net\Configuration\ConnectionManagementElementCollection.cs" />
+    <Compile Include="Net\Configuration\ConnectionManagementSection.cs" />
+    <Compile Include="Net\Configuration\DefaultProxySection.cs" />
+    <Compile Include="Net\Configuration\DefaultProxySectionInternal.cs" />
+    <Compile Include="Net\Configuration\HttpWebRequestElement.cs" />
+    <Compile Include="Net\Configuration\Ipv6Element.cs" />
+    <Compile Include="Net\Configuration\NetSectionGroup.cs" />
+    <Compile Include="Net\Configuration\PerformanceCountersElement.cs" />
+    <Compile Include="Net\Configuration\ProxyElement.cs" />
+    <Compile Include="Net\Configuration\ServicePointManagerElement.cs" />
+    <Compile Include="Net\Configuration\SettingsSection.cs" />
+    <Compile Include="Net\Configuration\SettingsSectionInternal.cs" />
+    <Compile Include="Net\Configuration\SocketElement.cs" />
+    <Compile Include="Net\Configuration\WebProxyScriptElement.cs" />
+    <Compile Include="Net\Configuration\WebRequestModuleElement.cs" />
+    <Compile Include="Net\Configuration\WebRequestModuleElementCollection.cs" />
+    <Compile Include="Net\Configuration\WebRequestModulesSection.cs" />
+    <Compile Include="Net\Cookie.cs" />
+    <Compile Include="Net\CookieCollection.cs" />
+    <Compile Include="Net\CookieContainer.cs" />
+    <Compile Include="Net\CookieException.cs" />
+    <Compile Include="Net\CookieParser.cs" />
+    <Compile Include="Net\CookieToken.cs" />
+    <Compile Include="Net\CookieTokenizer.cs" />
+    <Compile Include="Net\CookieVariant.cs" />
+    <Compile Include="Net\CredentialCache.cs" />
+    <Compile Include="Net\DecompressionMethods.cs" />
+    <Compile Include="Net\DefaultCertificatePolicy.cs" />
+    <Compile Include="Net\DigestClient.cs" />
+    <Compile Include="Net\DigestHeaderParser.cs" />
+    <Compile Include="Net\DigestSession.cs" />
+    <Compile Include="Net\Dns.cs" />
+    <Compile Include="Net\EmptyWebProxy.cs" />
+    <Compile Include="Net\EndPoint.cs" />
+    <Compile Include="Net\ExceptionHelper.cs" />
+    <Compile Include="Net\FileWebRequest.cs" />
+    <Compile Include="Net\FileWebRequestCreator.cs" />
+    <Compile Include="Net\FileWebResponse.cs" />
+    <Compile Include="Net\FileWebStream.cs" />
+    <Compile Include="Net\FtpAsyncResult.cs" />
+    <Compile Include="Net\FtpDataStream.cs" />
+    <Compile Include="Net\FtpRequestCreator.cs" />
+    <Compile Include="Net\FtpStatus.cs" />
+    <Compile Include="Net\FtpStatusCode.cs" />
+    <Compile Include="Net\FtpWebRequest.cs" />
+    <Compile Include="Net\FtpWebResponse.cs" />
+    <Compile Include="Net\GlobalProxySelection.cs" />
+    <Compile Include="Net\HeaderInfo.cs" />
+    <Compile Include="Net\HeaderInfoTable.cs" />
+    <Compile Include="Net\HeaderParser.cs" />
+    <Compile Include="Net\HeaderVariantInfo.cs" />
+    <Compile Include="Net\HttpContinueDelegate.cs" />
+    <Compile Include="Net\HttpRequestCreator.cs" />
+    <Compile Include="Net\HttpRequestHeader.cs" />
+    <Compile Include="Net\HttpStatusCode.cs" />
+    <Compile Include="Net\HttpStatusDescription.cs" />
+    <Compile Include="Net\HttpVersion.cs" />
+    <Compile Include="Net\HttpWebRequest.cs" />
+    <Compile Include="Net\HttpWebResponse.cs" />
+    <Compile Include="Net\IAuthenticationModule.cs" />
+    <Compile Include="Net\ICertificatePolicy.cs" />
+    <Compile Include="Net\ICloseEx.cs" />
+    <Compile Include="Net\ICredentialPolicy.cs" />
+    <Compile Include="Net\ICredentials.cs" />
+    <Compile Include="Net\InternalException.cs" />
+    <Compile Include="Net\IPAddress.cs" />
+    <Compile Include="Net\IPEndPoint.cs" />
+    <Compile Include="Net\IPHostEntry.cs" />
+    <Compile Include="Net\IPv6AddressFormatter.cs" />
+    <Compile Include="Net\IWebProxy.cs" />
+    <Compile Include="Net\IWebRequestCreate.cs" />
+    <Compile Include="Net\LazyAsyncResult.cs" />
+    <Compile Include="Net\Logging.cs" />
+    <Compile Include="Net\MonoChunkStream.cs" />
+    <Compile Include="Net\NclUtilities.cs" />
+    <Compile Include="Net\NetRes.cs" />
+    <Compile Include="Net\NetworkCredential.cs" />
+    <Compile Include="Net\NetworkInformation\CommonUnixIPGlobalProperties.cs" />
+    <Compile Include="Net\NetworkInformation\IPGlobalProperties.cs" />
+    <Compile Include="Net\NetworkInformation\MibIPGlobalProperties.cs" />
+    <Compile Include="Net\NetworkInformation\NetBiosNodeType.cs" />
+    <Compile Include="Net\NetworkInformation\NetworkInformationException.cs" />
+    <Compile Include="Net\NetworkInformation\NetworkInterfaceComponent.cs" />
+    <Compile Include="Net\NetworkInformation\UnixIPGlobalProperties.cs" />
+    <Compile Include="Net\NetworkInformation\UnixNoLibCIPGlobalProperties.cs" />
+    <Compile Include="Net\NetworkInformation\Win32IPGlobalProperties.cs" />
+    <Compile Include="Net\NetworkInformation\Win32NetworkInterface.cs" />
+    <Compile Include="Net\NetworkInformation\Win32_FIXED_INFO.cs" />
+    <Compile Include="Net\NetworkInformation\Win32_IP_ADDR_STRING.cs" />
+    <Compile Include="Net\NtlmClient.cs" />
+    <Compile Include="Net\PathList.cs" />
+    <Compile Include="Net\ProtocolViolationException.cs" />
+    <Compile Include="Net\ReadState.cs" />
+    <Compile Include="Net\SecurityProtocolType.cs" />
+    <Compile Include="Net\Security\AuthenticatedStream.cs" />
+    <Compile Include="Net\Security\AuthenticationLevel.cs" />
+    <Compile Include="Net\Security\LocalCertSelectionCallback.cs" />
+    <Compile Include="Net\Security\RemoteCertificateValidationCallback.cs" />
+    <Compile Include="Net\Security\SslPolicyErrors.cs" />
+    <Compile Include="Net\Security\SslStream.cs" />
+    <Compile Include="Net\ServerCertValidationCallback.cs" />
+    <Compile Include="Net\ServicePoint.cs" />
+    <Compile Include="Net\ServicePointManager.cs" />
+    <Compile Include="Net\ServicePointScheduler.cs" />
+    <Compile Include="Net\SocketAddress.cs" />
+    <Compile Include="Net\Sockets\AddressFamily.cs" />
+    <Compile Include="Net\Sockets\IOControlCode.cs" />
+    <Compile Include="Net\Sockets\IPProtectionLevel.cs" />
+    <Compile Include="Net\Sockets\LingerOption.cs" />
+    <Compile Include="Net\Sockets\MulticastOption.cs" />
+    <Compile Include="Net\Sockets\NetworkStream.cs" />
+    <Compile Include="Net\Sockets\ProtocolType.cs" />
+    <Compile Include="Net\Sockets\SafeSocketHandle.cs" />
+    <Compile Include="Net\Sockets\SelectMode.cs" />
+    <Compile Include="Net\Sockets\Socket.cs" />
+    <Compile Include="Net\Sockets\SocketAsyncEventArgs.cs" />
+    <Compile Include="Net\Sockets\SocketAsyncResult.cs" />
+    <Compile Include="Net\Sockets\SocketError.cs" />
+    <Compile Include="Net\Sockets\SocketException.cs" />
+    <Compile Include="Net\Sockets\SocketFlags.cs" />
+    <Compile Include="Net\Sockets\SocketOperation.cs" />
+    <Compile Include="Net\Sockets\SocketOptionLevel.cs" />
+    <Compile Include="Net\Sockets\SocketOptionName.cs" />
+    <Compile Include="Net\Sockets\SocketShutdown.cs" />
+    <Compile Include="Net\Sockets\SocketTaskExtensions.cs" />
+    <Compile Include="Net\Sockets\SocketType.cs" />
+    <Compile Include="Net\SystemNetworkCredential.cs" />
+    <Compile Include="Net\TimerThread.cs" />
+    <Compile Include="Net\UnsafeNclNativeMethods.cs" />
+    <Compile Include="Net\ValidationHelper.cs" />
+    <Compile Include="Net\WebCompletionSource.cs" />
+    <Compile Include="Net\WebConnection.cs" />
+    <Compile Include="Net\WebConnectionStream.cs" />
+    <Compile Include="Net\WebConnectionTunnel.cs" />
+    <Compile Include="Net\WebException.cs" />
+    <Compile Include="Net\WebExceptionInternalStatus.cs" />
+    <Compile Include="Net\WebExceptionMapping.cs" />
+    <Compile Include="Net\WebExceptionStatus.cs" />
+    <Compile Include="Net\WebHeaderCollection.cs" />
+    <Compile Include="Net\WebHeaderCollectionType.cs" />
+    <Compile Include="Net\WebOperation.cs" />
+    <Compile Include="Net\WebProxy.cs" />
+    <Compile Include="Net\WebRequest.cs" />
+    <Compile Include="Net\WebRequestPrefixElement.cs" />
+    <Compile Include="Net\WebRequestStream.cs" />
+    <Compile Include="Net\WebResponse.cs" />
+    <Compile Include="Net\WebResponseStream.cs" />
+    <Compile Include="ParsingError.cs" />
+    <Compile Include="Platform.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\Authentication\AuthenticationException.cs" />
+    <Compile Include="Security\Authentication\SslProtocols.cs" />
+    <Compile Include="Security\Cryptography\AsnDecodeStatus.cs" />
+    <Compile Include="Security\Cryptography\AsnEncodedData.cs" />
+    <Compile Include="Security\Cryptography\CAPI.cs" />
+    <Compile Include="Security\Cryptography\Oid.cs" />
+    <Compile Include="Security\Cryptography\OidCollection.cs" />
+    <Compile Include="Security\Cryptography\OidEnumerator.cs" />
+    <Compile Include="Security\Cryptography\OidGroup.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\PublicKey.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\StoreLocation.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X500DistinguishedName.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509BasicConstraintsExtension.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509Certificate2.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509Certificate2Collection.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509Certificate2Impl.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509Certificate2ImplMono.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509CertificateCollection.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509CertificateImplCollection.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509Chain.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509ChainElement.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509ChainElementCollection.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509ChainElementEnumerator.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509ChainImpl.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509ChainImplMono.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509ChainPolicy.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509ChainStatus.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509ChainStatusFlags.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509EnhancedKeyUsageExtension.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509Extension.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509ExtensionCollection.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509Helper2.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509KeyUsageExtension.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509KeyUsageFlags.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509RevocationFlag.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509RevocationMode.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509Store.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509SubjectKeyIdentifierExtension.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509SubjectKeyIdentifierHashAlgorithm.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509Utils.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509VerificationFlags.cs" />
+    <Compile Include="SR.cs" />
+    <Compile Include="Text\RegularExpressions\CachedCodeEntry.cs" />
+    <Compile Include="Text\RegularExpressions\Capture.cs" />
+    <Compile Include="Text\RegularExpressions\CaptureCollection.cs" />
+    <Compile Include="Text\RegularExpressions\CaptureEnumerator.cs" />
+    <Compile Include="Text\RegularExpressions\ExclusiveReference.cs" />
+    <Compile Include="Text\RegularExpressions\Group.cs" />
+    <Compile Include="Text\RegularExpressions\GroupCollection.cs" />
+    <Compile Include="Text\RegularExpressions\GroupEnumerator.cs" />
+    <Compile Include="Text\RegularExpressions\Match.cs" />
+    <Compile Include="Text\RegularExpressions\MatchEvaluator.cs" />
+    <Compile Include="Text\RegularExpressions\MatchSparse.cs" />
+    <Compile Include="Text\RegularExpressions\Regex.cs" />
+    <Compile Include="Text\RegularExpressions\RegexBoyerMoore.cs" />
+    <Compile Include="Text\RegularExpressions\RegexCharClass.cs" />
+    <Compile Include="Text\RegularExpressions\RegexCode.cs" />
+    <Compile Include="Text\RegularExpressions\RegexFC.cs" />
+    <Compile Include="Text\RegularExpressions\RegexFCD.cs" />
+    <Compile Include="Text\RegularExpressions\RegexInterpreter.cs" />
+    <Compile Include="Text\RegularExpressions\RegexMatchTimeoutException.cs" />
+    <Compile Include="Text\RegularExpressions\RegexNode.cs" />
+    <Compile Include="Text\RegularExpressions\RegexOptions.cs" />
+    <Compile Include="Text\RegularExpressions\RegexParser.cs" />
+    <Compile Include="Text\RegularExpressions\RegexPrefix.cs" />
+    <Compile Include="Text\RegularExpressions\RegexReplacement.cs" />
+    <Compile Include="Text\RegularExpressions\RegexRunner.cs" />
+    <Compile Include="Text\RegularExpressions\RegexRunnerFactory.cs" />
+    <Compile Include="Text\RegularExpressions\RegexTree.cs" />
+    <Compile Include="Text\RegularExpressions\RegexWriter.cs" />
+    <Compile Include="Text\RegularExpressions\SharedReference.cs" />
+    <Compile Include="UncNameHelper.cs" />
+    <Compile Include="UnescapeMode.cs" />
+    <Compile Include="Unity\ThrowStub.cs" />
+    <Compile Include="Uri.cs" />
+    <Compile Include="UriBuilder.cs" />
+    <Compile Include="UriComponents.cs" />
+    <Compile Include="UriFormat.cs" />
+    <Compile Include="UriFormatException.cs" />
+    <Compile Include="UriHelper.cs" />
+    <Compile Include="UriHostNameType.cs" />
+    <Compile Include="UriIdnScope.cs" />
+    <Compile Include="UriKind.cs" />
+    <Compile Include="UriParser.cs" />
+    <Compile Include="UriSyntaxFlags.cs" />
+    <Compile Include="UriTypeConverter.cs" />
+    <Compile Include="_PrivateImplementationDetails_.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

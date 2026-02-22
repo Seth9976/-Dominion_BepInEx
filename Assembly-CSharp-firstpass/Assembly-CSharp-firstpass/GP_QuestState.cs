@@ -1,0 +1,18 @@
+﻿using System;
+
+// Token: 0x0200005B RID: 91
+public enum GP_QuestState
+{
+	// Token: 0x04000595 RID: 1429
+	STATE_UPCOMING = 1,
+	// Token: 0x04000596 RID: 1430
+	STATE_OPEN,
+	// Token: 0x04000597 RID: 1431
+	STATE_ACCEPTED,
+	// Token: 0x04000598 RID: 1432
+	STATE_COMPLETED,
+	// Token: 0x04000599 RID: 1433
+	STATE_EXPIRED,
+	// Token: 0x0400059A RID: 1434
+	STATE_FAILED
+}
